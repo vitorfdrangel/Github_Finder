@@ -15,22 +15,23 @@ const Home = () => {
 
     const data = await res.json();
 
-    if (data) {
-      setUser({
-        avatar_url: data.avatar_url,
-        login: data.login,
-        location: data.location,
-        followers: data.followers,
-        following: data.following,
-      });
-    }
+    const { avatar_url, login, location, followers, following } = data;
 
-    console.log(user);
+    const userData: UserProps = {
+      avatar_url,
+      login,
+      location,
+      followers,
+      following,
+    };
+
+    setUser(userData);
   };
 
   return (
     <div>
       <Search loadUser={loadUser} />
+      {user && <p>{user.login}</p>}
     </div>
   );
 };
