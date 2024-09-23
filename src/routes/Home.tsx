@@ -15,17 +15,7 @@ const Home = () => {
 
     const data = await res.json();
 
-    if (data) {
-      setUser({
-        avatar_url: data.avatar_url,
-        login: data.login,
-        location: data.location,
-        followers: data.followers,
-        following: data.following,
-      });
-    }
-
-    console.log(user);
+    console.log(data);
   };
 
   return (
