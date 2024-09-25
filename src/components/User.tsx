@@ -12,20 +12,20 @@ const User = ({
   location,
 }: UserProps) => {
   return (
-    <div className={classes.user}>
+    <div>
       <img src={avatar_url} alt={login} />
       <h2>{login}</h2>
-      <p className={classes.location}>
+      <p>
         <MdLocationPin /> <span>{location}</span>
       </p>
-      <div className={classes.stats}>
+      <div>
         <div>
           <p>Seguidores:</p>
-          <p className={classes.number}>{followers}</p>
+          <p>{followers}</p>
         </div>
         <div>
           <p>Seguindo:</p>
-          <p className={classes.number}>{following}</p>
+          <p>{following}</p>
         </div>
       </div>
       <Link to={`/repos/${login}`}>Ver melhores projetos</Link>
