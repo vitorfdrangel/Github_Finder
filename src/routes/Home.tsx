@@ -1,5 +1,6 @@
 // components
 import Search from "../components/Search";
+import User from "../components/User";
 
 // hooks
 import { useState } from "react";
@@ -14,7 +15,7 @@ const Home = () => {
     const res = await fetch(`https://api.github.com/users/${userName}`);
 
     const data = await res.json();
-    
+
     const { avatar_url, login, location, followers, following } = data;
 
     const userData: UserProps = {
@@ -31,7 +32,7 @@ const Home = () => {
   return (
     <div>
       <Search loadUser={loadUser} />
-      {user && <p>{user.login}</p>}
+      {user && <User {...user} />}
     </div>
   );
 };
