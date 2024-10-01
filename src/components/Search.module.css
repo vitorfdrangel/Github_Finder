@@ -30,4 +30,10 @@
 .search_container button {
   background-color: #3d3d3d;
   cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.search_container button:hover {
+  opacity: 1;
 }

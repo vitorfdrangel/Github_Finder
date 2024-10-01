@@ -1,0 +1,68 @@
+.user {
+  background-color: #aaa;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.user img {
+  width: 140px;
+  height: 140px;
+  border: 4px solid #777;
+  border-radius: 50%;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.location svg {
+  fill: #d84e4e;
+  font-size: 1.5rem;
+}
+
+.location span {
+  color: #777;
+  font-weight: bold;
+}
+
+.stats {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.stats div {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stats div:first-child {
+  border-right: 1px solid #7d7d7d;
+}
+
+.stats .number {
+  background-color: #7d7d7d;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.user a {
+  background-color: #3d3d3d;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.user a:hover {
+  opacity: 1;
+}
