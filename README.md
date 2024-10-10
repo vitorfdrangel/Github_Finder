@@ -8,6 +8,6 @@
 
 ### Veja seus melhores projetos
 
-![Captura-de-tela-2024-10-10-183454.png](https://i.postimg.cc/HkywBkvZ/Captura-de-tela-2024-10-10-183454.png)
-
 #### Acesse o repositório que te interessou clicando em "Ver código"
+
+![Captura-de-tela-2024-10-10-183454.png](https://i.postimg.cc/HkywBkvZ/Captura-de-tela-2024-10-10-183454.png)
