@@ -1,4 +1,6 @@
 ## GitHub Finder
+#### Projeto feito em typescript e react. 
+##### Para consumir a API disponibilizada na documentação do GitHub, foram aplicados os conceitos de Rest API.
 
 ![Captura-de-tela-2024-10-10-183335.png](https://i.postimg.cc/YChnk7nY/Captura-de-tela-2024-10-10-183335.png)
 
