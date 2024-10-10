@@ -1,6 +1,7 @@
 // Components
 import BackBtn from "../components/BackBtn";
 import Loader from "../components/Loader";
+import Repo from "../components/Repo";
 
 // hooks
 import { useState, useEffect } from "react";
@@ -29,7 +30,13 @@ const Repos = () => {
 
       setIsLoading(false);
 
-      setRepos(data);
+      let orderedRepos = data.sort(
+        (a: RepoProps, b: RepoProps) => b.stargazers_count - a.stargazers_count
+      );
+
+      orderedRepos = orderedRepos.slice(0, 5);
+
+      setRepos(orderedRepos);
     };
 
     if (username) {
@@ -40,14 +47,14 @@ const Repos = () => {
   if (!repos && isLoading) return <Loader />;
 
   return (
-    <div>
+    <div className={classes.repos}>
       <BackBtn />
-      <h2>Explore os repositórios do usuário: {username}</h2>
+      <h2>Explore os 5 melhores repositórios do usuário: {username}</h2>
       {repos && repos.length === 0 && <p>Não há repositórios.</p>}
       {repos && repos.length > 0 && (
-        <div>
+        <div className={classes.repos_container}>
           {repos.map((repo: RepoProps) => (
-            <p>{repo.name}</p>
+            <Repo key={repo.name} {...repo} />
           ))}
         </div>
       )}
